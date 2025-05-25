@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   title: "Krish Gangajaliya - Full Stack Developer & Tech Student",
   description:
     "Professional portfolio of Krish Gangajaliya, a passionate computer science student and full-stack developer with expertise in modern web technologies and a track record of hackathon victories.",
-  keywords: "full stack developer, computer science, hackathon winner, web development, React, Next.js, portfolio",
+  keywords: "krish, gangajaliya, nirma, university, ahmedabad,full stack developer, computer science, hackathon winner, web development, React, Next.js, portfolio",
   authors: [{ name: "Krish Gangajaliya" }],
   openGraph: {
     title: "Krish Gangajaliya - Full Stack Developer & Tech Student",

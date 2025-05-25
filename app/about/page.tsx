@@ -19,7 +19,6 @@ import {
   Trophy,
   Sigma,
   BarChart2,
-  FlaskConical,
   BookMarked,
   BrainCircuit,
   Briefcase,
@@ -405,7 +404,7 @@ export default function AboutPage() {
                       <div className="flex items-center gap-3">
                         <School className="h-5 w-5 text-orange-500" />
                         <h4 className="font-medium">
-                          Children's Education NGO
+                          Children&apos;s Education NGO
                         </h4>
                       </div>
                       <Badge variant="outline">2021 - Present</Badge>
