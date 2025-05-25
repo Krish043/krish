@@ -62,7 +62,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            "Believe in the version of you that is yet to come!"
+            &quot;Believe in the version of you that is yet to come!&quot;
           </motion.p>
 
           <motion.div
