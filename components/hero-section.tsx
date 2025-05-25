@@ -18,7 +18,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Badge variant="outline" className="mb-6">
+          <Badge variant="outline" className="mb-6 mt-6">
             🚀 SWE Intern @ Crest Data Systems
           </Badge>
 
