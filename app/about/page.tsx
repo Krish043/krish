@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    I'm a Developer, Freelancer and CSE undergraduate at Nirma University, focused on building dynamic WebApps using the MERN stack and Next.js. Passionate about improving my skills, especially in AI and ML, exploring their real-world applications. Through continuous learning and personal projects, I aim to stay at the forefront of technology and software development.
+                    I&apos;m a Developer, Freelancer and CSE undergraduate at Nirma University, focused on building dynamic WebApps using the MERN stack and Next.js. Passionate about improving my skills, especially in AI and ML, exploring their real-world applications. Through continuous learning and personal projects, I aim to stay at the forefront of technology and software development.
                   </p>
                 </CardContent>
               </Card>

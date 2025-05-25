@@ -35,7 +35,7 @@ export default function ContactPage() {
 
       toast({
         title: "Message Sent!",
-        description: "I'll get back to you within 24 hours.",
+        description: "I will get back to you within 24 hours.",
       });
 
       setFormData({
@@ -46,6 +46,7 @@ export default function ContactPage() {
         type: "",
       });
     } catch (error) {
+      console.error("Email sending error:",error);
       toast({
         title: "Error",
         description: "There was an error sending your message. Please try again.",
