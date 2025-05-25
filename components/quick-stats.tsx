@@ -1,0 +1,134 @@
+// import { Card, CardContent } from "@/components/ui/card"
+// import { Trophy, Code, Users, Star } from "lucide-react"
+
+// export function QuickStats() {
+//   const stats = [
+//     {
+//       icon: <Code className="h-8 w-8 text-blue-600" />,
+//       value: "50+",
+//       label: "Projects Completed",
+//       description: "Across various technologies",
+//     },
+//     {
+//       icon: <Trophy className="h-8 w-8 text-yellow-600" />,
+//       value: "15",
+//       label: "Hackathon Wins",
+//       description: "Including 3 first places",
+//     },
+//     {
+//       icon: <Users className="h-8 w-8 text-green-600" />,
+//       value: "100+",
+//       label: "Students Mentored",
+//       description: "Through bootcamps & workshops",
+//     },
+//     {
+//       icon: <Star className="h-8 w-8 text-purple-600" />,
+//       value: "4.9",
+//       label: "GitHub Stars",
+//       description: "Average rating on projects",
+//     },
+//   ]
+
+//   return (
+//     <section className="py-20 bg-white dark:bg-gray-900">
+//       <div className="container mx-auto px-4">
+//         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {stats.map((stat, index) => (
+//             <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+//               <CardContent className="p-6">
+//                 <div className="flex justify-center mb-4">{stat.icon}</div>
+//                 <h3 className="text-3xl font-bold mb-2">{stat.value}</h3>
+//                 <p className="font-medium mb-1">{stat.label}</p>
+//                 <p className="text-sm text-muted-foreground">{stat.description}</p>
+//               </CardContent>
+//             </Card>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+
+
+
+"use client"
+
+import { Card, CardContent } from "@/components/ui/card"
+import { Code, Calendar, Brain, Trophy } from "lucide-react"
+import { useEffect, useState } from "react"
+
+// Hook that ensures all counters finish at roughly the same time
+function useCountUp(target: number, totalDuration = 1200) {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    let current = 0
+    const steps = Math.min(target, 60) // Limit steps for performance
+    const stepTime = totalDuration / steps
+    const increment = Math.ceil(target / steps)
+
+    const interval = setInterval(() => {
+      current += increment
+      if (current >= target) {
+        current = target
+        clearInterval(interval)
+      }
+      setCount(current)
+    }, stepTime)
+
+    return () => clearInterval(interval)
+  }, [target, totalDuration])
+
+  return count
+}
+
+export function QuickStats() {
+  const stats = [
+    {
+      icon: <Code className="h-8 w-8 text-blue-600" />,
+      value: 13,
+      label: "Projects Deployed",
+      description: "Across MERN, Next.js, Flask & more",
+    },
+    {
+      icon: <Calendar className="h-8 w-8 text-green-600" />,
+      value: 2,
+      label: "Years of Experience",
+      description: "Internships and freelance work",
+    },
+    {
+      icon: <Brain className="h-8 w-8 text-purple-600" />,
+      value: 350,
+      label: "Problems Solved",
+      description: "LeetCode, Codeforces, HackerRank (5⭐)",
+    },
+    {
+      icon: <Trophy className="h-8 w-8 text-yellow-600" />,
+      value: 5,
+      label: "Hackathons Participated",
+      description: "Won 2 first prizes including HackNUthon",
+    },
+  ]
+
+  return (
+    <section className="py-20 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((stat, index) => {
+            const count = useCountUp(stat.value)
+            return (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex justify-center mb-4">{stat.icon}</div>
+                  <h3 className="text-3xl font-bold mb-2">{count}+</h3>
+                  <p className="font-medium mb-1">{stat.label}</p>
+                  <p className="text-sm text-muted-foreground">{stat.description}</p>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
