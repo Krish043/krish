@@ -17,7 +17,7 @@ export const projects = [
     title: "EDUcrest",
     description:
       "A learning platform where users can choose courses, get video transcripts, and auto-generated quizzes using Speech-to-Text and Gemini API.",
-    image: "/assets/EDUcrest.png",
+    image: "/assets/educrest.png",
     tags: ["Next.js", "AssemblyAI", "Gemini API", "Flask", "React"],
     category: "Full Stack",
     github: "https://github.com/Krish043/EDUcrest",
