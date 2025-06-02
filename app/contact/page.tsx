@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Github, Linkedin, Send, Youtube, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Youtube, Instagram, Link } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -86,22 +86,28 @@ export default function ContactPage() {
       username: "Krish Gangajaliya",
     },
     {
-      platform: "Instagram",
-      icon: <Instagram className="h-5 w-5" />,
-      url: "https://www.instagram.com/krrish_145/",
-      username: "@krrish_145",
-    },
-    {
       platform: "GitHub",
       icon: <Github className="h-5 w-5" />,
       url: "https://github.com/Krish043",
       username: "@Krish043",
     },
     {
+      platform: "Fiverr",
+      icon: <Link className="h-5 w-5" />,
+      url: "https://www.fiverr.com/krish_043",
+      username: "krish_043",
+    },
+    {
       platform: "YouTube",
       icon: <Youtube className="h-5 w-5" />,
       url: "https://www.youtube.com/@krrishgangajaliya5742",
       username: "Krish Gangajaliya",
+    },
+    {
+      platform: "Instagram",
+      icon: <Instagram className="h-5 w-5" />,
+      url: "https://www.instagram.com/krrish_145/",
+      username: "@krrish_145",
     },
   ];
 
