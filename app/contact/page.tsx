@@ -100,7 +100,7 @@ export default function ContactPage() {
     {
       platform: "YouTube",
       icon: <Youtube className="h-5 w-5" />,
-      url: "https://www.youtube.com/@krrishgangajaliya5742",
+      url: "https://www.youtube.com/@krish_gangajaliya",
       username: "Krish Gangajaliya",
     },
     {
